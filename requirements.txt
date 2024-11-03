@@ -1,13 +1,8 @@
 setuptools
 pandas==1.5.3
 numpy
-matplotlib==3.7.1
-seaborn==0.12.2
 nltk==3.8.1
-google-play-scraper==1.2.3
 tqdm==4.65.0
 scikit-learn==1.2.2
 requests==2.31.0
 streamlit==1.24.0
-pillow==9.4.0
-
