@@ -9,3 +9,5 @@ tqdm==4.65.0
 scikit-learn==1.2.2
 requests==2.31.0
 streamlit==1.24.0
+pillow==9.4.0
+
