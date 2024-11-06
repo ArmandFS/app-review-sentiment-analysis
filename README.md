@@ -15,7 +15,7 @@ This project analyzes the sentiment of reviews for the **Crunchyroll app** on th
 
 ---
 
-### 📌 Key Features:
+### 📌 Key Features 📌:
 - **Sentiment Classification**: Automatically classifies reviews as **positive**, **neutral**, or **negative**.
 - **Real-Time Analysis**: Enter any review text and get sentiment analysis instantly.
 - **Data Visualization**: Visualize sentiment distribution of Crunchyroll reviews.
