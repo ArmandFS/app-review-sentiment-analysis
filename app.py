@@ -4,6 +4,10 @@ import pandas as pd
 from preprocessing import preprocess_text
 from sklearn.linear_model import LogisticRegression
 
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords') 
+
 
 #static images
 logo = 'Crunchyroll_Logo.png'
