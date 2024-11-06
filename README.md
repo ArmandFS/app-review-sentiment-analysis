@@ -8,9 +8,9 @@ This project analyzes the sentiment of reviews for the **Crunchyroll app** on th
 - **Drive business decisions**: Listen to user feedback, understand criticism, and improve the app's performance and features.
 
 ### 🚀 Tech Stack 🚀
-- **Python** 🐍 for computation and modeling.
-- **Streamlit** 🖥️ for an interactive web application.
-- **Scikit-Learn** 🌳 for logistic regression, random forest, and TF-IDF vectorization.
+- **Python** : for computation and modeling.
+- **Streamlit** : for an interactive web application.
+- **Scikit-Learn** : for logistic regression, random forest, and TF-IDF vectorization.
 - **NLTK** 🧠 for text preprocessing and analysis.
 
 ---
