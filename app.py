@@ -5,7 +5,7 @@ from preprocessing import preprocess_text
 from sklearn.linear_model import LogisticRegression
 
 import nltk
-nltk.download('punkt')
+nltk.download('punkt')  
 nltk.download('stopwords') 
 
 
@@ -62,9 +62,10 @@ elif page == "Analytics":
     #pie chart plotting code
     st.header("Sentiment Polarity Distribution")
     st.markdown("This pie chart displays the distribution of sentiment polarities across Crunchyroll app reviews.")
-    show_pie_chart = st.button("Show Sentiment Polarity Pie Chart")
-    if show_pie_chart:
-        st.image(polarity_pie_chart, use_column_width=True)
+    with st.spinner('Loading pie chart...'):
+        show_pie_chart = st.button("Show Sentiment Polarity Pie Chart")
+        if show_pie_chart:
+            st.image(polarity_pie_chart, use_column_width=True, width=200)
     
     st.markdown("""
         **Insights**:
@@ -75,10 +76,11 @@ elif page == "Analytics":
     #Model Accuracy Bar Chart
     st.header("Model Accuracy Comparison")
     st.markdown("This bar chart compares the training and test accuracies of the Random Forest and Logistic Regression models.")
-    show_accuracy_bar_chart = st.button("Show Model Accuracy Bar Chart")
-    if show_accuracy_bar_chart:
-        st.image(model_accuracy_bar_chart, use_column_width=True)
     
+    with st.spinner('Loading bar chart...'):
+        show_accuracy_bar_chart = st.button("Show Model Accuracy Bar Chart")
+        if show_accuracy_bar_chart:
+            st.image(model_accuracy_bar_chart, use_column_width=True, width=700)
     st.markdown("""
         **Insights**:
         - This bar chart provides insight into how well each model performed on training and test data.
@@ -89,9 +91,13 @@ elif page == "Analytics":
     #Model Accuracy Heatmap
     st.header("Model Accuracy Heatmap")
     st.markdown("This heatmap provides a visual representation of the accuracy of each model on training and test data.")
-    show_heatmap = st.button("Show Accuracy Heatmap")
-    if show_heatmap:
-        st.image(accuracy_heatmap, use_column_width=True)
+    
+    with st.spinner('Loading heatmap...'):
+        show_heatmap = st.button("Show Accuracy Heatmap")
+        if show_heatmap:
+            st.image(accuracy_heatmap, use_column_width=True, width=350)
+    
+    
     st.markdown("""
         **Insights**:
         - The heatmap displays a more compact view of accuracy scores across models and data types.
@@ -114,15 +120,15 @@ else:
         prediction = logistic_regression_model.predict(text_features)[0]
         
         if prediction == "positive":
-            sentiment = "Positive"
+            sentiment = "🙂 Positive 🙂"
             color = "green"
             explanation = "The review expresses a favorable opinion about the application, highlighting positive experiences or satisfaction with features."
         elif prediction == "negative":
-            sentiment = "Negative"
+            sentiment = "😠 Negative 😠"
             color = "red"
             explanation = "The review shows a critical perspective, possibly highlighting issues, frustrations, or not meeting expectations with the application."
         else:
-            sentiment = "Neutral"
+            sentiment = "😐 Neutral 😐"
             color = "orange"
             explanation = "The review provides a balanced view, neither liking nor disliking the application, and might include both positive and negative aspects."
 
@@ -142,22 +148,35 @@ else:
         <style>
         /* Sidebar styling */
         .sidebar .sidebar-content { background-color: #333333; color: white; }
-        
+
         /* Title and headers styling */
         h1, h2, h3, .sidebar .sidebar-content h2 {
             font-family: 'Arial', sans-serif;
         }
-        
+
         /* Text area and input styling */
         .stTextInput, .stTextArea {
             border: 10px ;
             padding: 10px;
             border-radius: 5px;
         }
-        
+
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-thumb { background: #1f77b4; border-radius: 4px; }
+
+        /* Animation effects */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Hover effects */
+        .stButton:hover {
+            background-color: #f7c1b4;
+            transition: all 0.3s ease;
+        }
+
         </style>
     """, unsafe_allow_html=True)
 
