@@ -1,7 +1,7 @@
 # 📱💬 Crunchyroll Review Sentiment Analysis 📱💬
 
 ## ⭐ Project Overview ⭐
-This project analyzes the sentiment of reviews for the **Crunchyroll app** on the Google Play Store 📊. Using **Natural Language Processing (NLP)** and **Machine Learning**, we aim to classify reviews as **positive**, **neutral**, or **negative**. 
+This project analyzes the sentiments of reviews for the **Crunchyroll app** on the Google Play Store 📊. Using **Natural Language Processing (NLP)** and **Machine Learning**, we aim to classify reviews as **positive**, **neutral**, or **negative**. 
 
 ### ✨ Objectives ✨
 - **Understand user sentiment**: Learn how to create a sentiment analysis model and implement it in a Streamlit app.
