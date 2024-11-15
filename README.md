@@ -4,7 +4,7 @@
 This project analyzes the sentiments of reviews for the **Crunchyroll app** on the Google Play Store 📊. Using **Natural Language Processing (NLP)** and **Machine Learning**, we aim to classify reviews as **positive**, **neutral**, or **negative**. 
 
 ### ✨ Objectives ✨
-- **Understand user sentiment**: Learn how to create a sentiment analysis model and implement it in a Streamlit app.
+- **Understand user sentiment**: Learn how to create a sentiment analysis model and implement it in a local Streamlit app.
 - **Drive business decisions**: Listen to user feedback, understand criticism, and improve the app's performance and features.
 
 ### 🚀 Tech Stack 🚀
